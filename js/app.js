@@ -7,7 +7,7 @@ async function gets(){
     // console.log(data);
     data.forEach(e=>{
         
-        container.innerHTML+=`  <div class="card" id="${e.name.common}"}>
+        container.innerHTML+=`  <div class="card" id="${e.name.common}">
         <div class="top">
             <img src="${e.flags.svg}" alt="">
             </div>
@@ -82,6 +82,7 @@ async function gets(){
                                 </div>
                                 </div>
                                 `;
+                                search.value='';
                         }
                     })
 
@@ -91,36 +92,8 @@ async function gets(){
         })
         const spec =   document.querySelector(".spec");
         const mcard = document.querySelectorAll(".card");
-        // mcard.forEach(e=>{
-        //     e.addEventListener("click",function(){
-        //         console.log(e.getAttribute('id'));
-        //         for(var i=0;i<das.length;i++){
-        //             if(e.getAttribute('id')==das[i].name.common){
-        //                 container.classList.add("hide")
-        //                 spec.classList.remove("hide");
-        //                 spec.innerHTML =` <button id='btn' class="back">back</button>
-        //                 <div class="main">
-        //                 <div class="ph"><img src='${data[i].flags.svg}' alt=""></div>
-        //                 <div class="info">
-        //                 <div class="l">
-        //                 <h3>${data[i].name.common}</h3>
-        //                 <p>Native name : ${data[i].name.common}</p>
-        //                 <p>Region : ${data[i].region} </p>
-        //                 <p>Sub regoin : ${data[i].subregion}</p>
-        //                 <p>Capital : ${data[i].capital}</p>
-        //                 </div>
-        //                 <div class="r">
-        //                 </div>
-                        
-        //                 </div>
-        //                 </div>`
-        //             }
-        //         }
-                
-                
-        //     })
-        // })
         
+                
         
             document.body.addEventListener("click",function(e){
 
@@ -163,7 +136,7 @@ async function gets(){
                 data.forEach(e=>{
 
         
-                    container.innerHTML+=`  <div class="card" id="${e.name.common}"}>
+                    container.innerHTML+=`  <div class="card" id="${e.name.common}">
                     <div class="top">
                         <img src="${e.flags.svg}" alt="">
                         </div>
@@ -178,6 +151,7 @@ async function gets(){
                         `
                         
                         filter.value = "none";
+                        search.value='';
 
                     });
               });
